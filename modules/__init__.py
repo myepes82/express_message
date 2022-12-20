@@ -1,0 +1,1 @@
+from .reader import read_file_as_string, FileType
