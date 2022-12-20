@@ -10,6 +10,16 @@ app = FastAPI()
 async def get_home() -> None:
     file = reader(file_name="index", file_type=FileType.HTML)
     return file    
+
+@app.get("/about", response_class=HTMLResponse)
+async def get_home() -> None:
+    file = reader(file_name="about", file_type=FileType.HTML)
+    return file
+
+@app.get("/contact", response_class=HTMLResponse)
+async def get_home() -> None:
+    file = reader(file_name="contact", file_type=FileType.HTML)
+    return file      
     
 
 if __name__ == "__main__":
